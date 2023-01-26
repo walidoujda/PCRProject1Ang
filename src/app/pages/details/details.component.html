@@ -1,0 +1,40 @@
+<ul class="breadcrumb">
+    <li><a href="/" title="Accueil">Accueil</a></li>
+    <li class="active">Détail</li>
+  </ul>
+
+<h1 class="text-center">Détail</h1>
+
+<div>
+    Total de participations : {{ participationsCount }} <br />
+    Total de médails : {{ medalsCount }} <br />
+    Nombre total de participants  : {{ athleteCount }} <br />
+
+</div>
+<div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                    <th scope="col">Pays</th>
+                    <th scope="col">année</th>
+                    <th scope="col">city</th>
+                    <th scope="col">Nombre d'athlètes </th>
+                    <th scope="col">Nombre de médails</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let participation of participations" >
+                <th scope="row">{{ country }}</th>
+                <td>{{participation[0]}}</td>
+                <td>{{participation[1]}}</td>
+                <td>{{participation[2]}}</td>
+                <td>{{participation[3]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <div *ngIf="ev" > 
+        <app-bar-chart [labels]='aOlympicServiceLabels' [data]='aOlympicServiceData' (parentFun)='parentFun($event)'></app-bar-chart>
+    </div>
+</div>
