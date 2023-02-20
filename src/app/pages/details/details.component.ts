@@ -38,7 +38,6 @@ export class DetailsComponent implements OnInit {
       if (value != null && value != undefined) {
         value.forEach((val) => {
           if (val.id == details + 1) {
-            console.log(val);
             this.country = val.country;
             val.participations.forEach((aParticipation) => {
               this.aOlympicServiceLabels.push(aParticipation.year);

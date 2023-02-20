@@ -22,7 +22,6 @@ export class PieChartComponent implements AfterViewInit {
   private onGraphClickEvent = (event: any,item: any) => {
     const points = this.pieChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
     var firstPoint = points[0];
-    console.log(firstPoint.index);
     this.parentFun.emit(firstPoint.index);
   }
   pieChartBrowser(): void {
