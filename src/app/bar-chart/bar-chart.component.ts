@@ -28,15 +28,13 @@ export class BarChartComponent implements AfterViewInit {
   barChartBrowser(): void {
     this.canvas = this.barCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d');
-    console.log('JSON.stringify(this.data)');
-    console.log(this.data);
-    console.log(this.labels);
     this.barChart = new Chart(this.ctx, {
       type: 'bar',
       data: {
         labels: this.labels,
         datasets: [
           {
+            label:'DATES',
             data: this.data,
           },
         ],

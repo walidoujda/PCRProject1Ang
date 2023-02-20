@@ -28,9 +28,6 @@ export class PieChartComponent implements AfterViewInit {
   pieChartBrowser(): void {
     this.canvas = this.pieCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d');
-    console.log('JSON.stringify(this.data)');
-    console.log(this.data);
-    console.log(this.labels);
     this.pieChart = new Chart(this.ctx, {
       type: 'pie',
       data: {

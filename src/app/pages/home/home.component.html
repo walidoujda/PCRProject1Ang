@@ -1,9 +1,15 @@
-
-
-
-<h2>Olympic games app</h2>
+<div class="container ">
+    <div class="row">
+        <div class="col title text-light rounded-3 "><h2>Medals per country</h2></div>
+    </div>
+    <div class="row">
+        <div class="col subtitle rounded-3">Number of JOs <br /> {{aOlympicServiceCities.length}} </div>
+        <div class="col subtitle rounded-3">Number of countries <br /> {{aOlympicServiceLabels.length}}</div>
+    </div>
+    <!-- display element when ev (status) is true -->
+    <div *ngIf="ev" class="chart"> 
+        <app-pie-chart [labels]='aOlympicServiceLabels' [data]='aOlympicServiceData' (parentFun)='parentFun($event)'></app-pie-chart>
+    </div>
+</div>
 <hr />
 
-<div *ngIf="ev" > 
-    <app-pie-chart [labels]='aOlympicServiceLabels' [data]='aOlympicServiceData' (parentFun)='parentFun($event)'></app-pie-chart>
-</div>
