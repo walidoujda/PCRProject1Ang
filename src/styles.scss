@@ -2,11 +2,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .root{
-    width: 100%; /* A remplacer par la taille de ta div */
-    height: 100px; 
+    height: 100%; 
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('./assets/images/jo.png') ;
+    max-height: 100%; 
 }
 .breadcrumb {
     padding: 0 .5rem;
@@ -24,4 +24,25 @@
     display: inline-block;
     margin: 0 .25rem;
     content: "→";
+}
+canvas {
+    max-width: 400px;
+    max-height: 400px;
+}
+.col.subtitle {
+    border:1px solid #04838f;
+    margin: 10px;
+    text-align: center;
+}
+
+.col.title {
+    border:1px solid #04838f;
+    background-color: #04838f;
+    margin: 10px;
+    text-align: center;
+}
+
+.chart {
+    margin:auto;
+    display: table;
 }
